@@ -8,7 +8,7 @@ module.exports = {
     node: true,
   },
   extends: ['airbnb', 'plugin:prettier/recommended', 'plugin:react/jsx-runtime', 'plugin:jsx-a11y/recommended', 'prettier', 'eslint:recommended', 'plugin:react/recommended', 'plugin:react-hooks/recommended'],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  ignorePatterns: ['dist', 'public', '.eslintrc.cjs'],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   settings: { react: { version: '18.2' } },
   plugins: ['jsx-a11y', 'prettier', 'react', 'react-refresh', 'eslint-plugin-prettier'],
