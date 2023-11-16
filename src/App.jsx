@@ -1,8 +1,8 @@
 import React from 'react';
-import quotes from './quotes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 import { faXTwitter, faTumblr } from '@fortawesome/free-brands-svg-icons';
+import quotes from './quotes';
 
 function App() {
   const [quote, setQuote] = React.useState(quotes[0]);
@@ -46,12 +46,14 @@ function App() {
             className="button"
             style={{ backgroundColor: `${quote.color}` }}
             target="_blank"
-            href={`https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,${encodeURIComponent(quote.author)}&caption=${encodeURIComponent(quote.author)}&content=${encodeURIComponent(quote.text)}&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button`}
+            href={`https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,${encodeURIComponent(quote.author)}&caption=${encodeURIComponent(quote.author)}&content=${encodeURIComponent(
+              quote.text
+            )}&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button`}
             rel="noreferrer"
           >
             <FontAwesomeIcon icon={faTumblr} />
           </a>
-          <button className="button" id="new-quote" onClick={handleQuoteChange} style={{ backgroundColor: `${quote.color}` }}>
+          <button type="button" className="button" id="new-quote" onClick={handleQuoteChange} style={{ backgroundColor: `${quote.color}` }}>
             New Quote
           </button>
         </div>
